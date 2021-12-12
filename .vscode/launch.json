@@ -1,6 +1,27 @@
 {
     "configurations": [
         
+        {
+            "name": "Attach to Kubernetes Pod (.NET Core)",
+            "type": "cloudcode.kubernetes",
+            "request": "attach",
+            "language": "NETCore",
+            "podSelector": {
+                "app": "deployment-name"
+            },
+            "localRoot": "${workspaceFolder}",
+            "remoteRoot": "Path to the Remote Directory Containing the Program"
+        },
+        {
+            "type": "android",
+            "request": "attach",
+            "name": "Android Attach",
+            "appSrcRoot": "${workspaceRoot}/app/src/main",
+            "adbPort": 5037,
+            "processId": "${command:PickAndroidProcess}"
+        },
+
+
         
         {
             "name": "Attach",
